@@ -9,19 +9,32 @@ interface NavbarLinkProps {
 export const NavbarLink = (props: NavbarLinkProps) => {
 
   const Link = styled.a`
-    margin: 3%;
-    color: #f0e1e1c2;
+    margin: 5%;
+    color: black;
     text-decoration: none;
-    font-size: 1.1em;
-    /* font-family: 'Quicksand', sans-serif; */
-    /* font-family: 'Amatic SC', cursive; */
-    font-family: 'Rajdhani', sans-serif;
+    font-size: 2.2em;
+    font-family: 'Amatic SC', cursive; 
     transition: color 2s;
     transition: border-bottom .5s;
-    &:hover {
-      border-bottom: 0.5px solid #f0e1e1;
-      color: #f0e1e1 
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      bottom: 0;
+      left: 0;
+      background: black;
+      visibility: hidden;
+      border-radius: 5px;
+      transform: scaleX(0);
+      transition: .25s linear;
     }
+    &:hover:before,
+    &:focus:before {
+    visibility: visible;
+    transform: scaleX(1);
+    outline: unset;
   `;
 
   return (
