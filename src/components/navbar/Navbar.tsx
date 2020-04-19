@@ -1,6 +1,5 @@
 import React,{FC} from 'react'
 import { NavbarLink } from './NavbarLink';
-import { css, jsx } from '@emotion/core'
 import styled from '@emotion/styled';
 
 
@@ -14,6 +13,13 @@ export const Navbar: FC = (props: any) => {
     left: 90%;
     padding-top: 1em;
     margin-right: 2%;
+    @media (max-width: 768px) {
+      left: 85%;
+    }
+    @media (max-width: 425px) {
+      left: 70%;
+      width: 30%;
+    }
   ` 
   return(
     <NavbarContainer>

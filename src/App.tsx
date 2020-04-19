@@ -1,8 +1,10 @@
 import React from "react";
-import "./App.css";
+
 import { Navbar } from "./components/navbar/Navbar";
-import styled from "@emotion/styled";
 import Overlay from "./components/header/Overlay";
+
+import styled from "@emotion/styled";
+import "./App.scss";
 
 const App: React.FC = () => {
   const Background = styled.div`
@@ -22,7 +24,7 @@ const App: React.FC = () => {
       </Background>
       <div
         className="Content"
-        style={{ backgroundColor: "#97aeb3", height: "100vh" }}>
+        style={{ backgroundColor: "#d8e7ea", height: "100vh" }}>
       </div>
     </div>
   );
