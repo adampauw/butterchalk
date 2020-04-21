@@ -35,7 +35,7 @@ export const NavbarLink = (props: NavbarLinkProps) => {
     visibility: visible;
     transform: scaleX(1);
     outline: unset;
-  `;
+    }`;
 
   return (
     <>
