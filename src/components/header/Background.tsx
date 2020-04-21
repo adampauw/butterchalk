@@ -6,7 +6,6 @@ export const Background = () => {
     background-image: url("/img/mountain-fog.jpg");
     background-size: cover;
     background-position: center;
-    height: 500px;
     position: relative;
   `;
 
