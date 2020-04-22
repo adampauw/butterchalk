@@ -3,10 +3,7 @@ import styled from "@emotion/styled";
 import DetailsContainer from "./Details";
 
 interface PostProps {
-  width: number;
-  height: number;
   title: string;
-  description: string;
   date: string;
   image: string;
 }
@@ -14,17 +11,23 @@ interface PostProps {
 export const PostContainer = (props: PostProps) => {
 
   const Post = styled.div`
-    width: ${props.width}%;
+    width: 33%;
     height: 0;
-    padding-top: 25%;
+    padding-top: 33%;
     background-image: url(${props.image});
     background-size: cover;
     margin: 10px;
+    position: relative;
+    transition: opacity .4s ease;
+    &:hover {
+      opacity: 0.5;
+      cursor: pointer;
+    }
   `;
 
-  return ( 
+  return (
     <Post>
-      <DetailsContainer title={props.title} description={props.description} date={props.date}/>
+        <DetailsContainer title={props.title} date={props.date} />
     </Post>
   );
 }

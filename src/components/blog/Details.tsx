@@ -3,22 +3,63 @@ import styled from "@emotion/styled";
 
 interface DetailsProps {
   title: string;
-  description: string;
   date: string;
 }
 
 export const DetailsContainer = (props: DetailsProps) => {
 
   const Details = styled.div`
-    width: 25%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
   `;
 
-  return ( 
-      <Details>
-        <span>{props.title}</span>
-        <span>{props.description}</span>
-        <span>{props.date}</span>
-      </Details>
+  const TextContainer = styled.div`
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Amatic SC', cursive; 
+  `;
+
+  const Title = styled.span`
+    font-size: 3vw;
+    position: absolute;
+    top: 60%;
+    height: 100%;
+  `;
+
+  const Date = styled.span`
+    font-size: 1.5vw;
+    position: absolute;
+    top: 50%;
+    height: 100%;
+  `;
+
+  const Triangle = styled.div`
+    width: 0;
+    height: 0;
+    border-left: 12vw solid transparent;
+    border-right: 12vw solid transparent;
+    border-bottom: 18vw solid #ffffff8c;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  `;
+
+  return (
+    <Details>
+      <TextContainer>
+        <Triangle>
+          <Date>{props.date}</Date>
+          <Title>{props.title}</Title>
+        </Triangle>
+      </TextContainer>
+    </Details>
   );
 }
 

@@ -1,16 +1,27 @@
 import React from 'react'
 import PostContainer from './Post';
+import styled from '@emotion/styled';
 
 export const Blog = () => {
-return(
-  <div>
-    <PostContainer 
-      width={25} 
-      height={25} 
-      image={"/img/pic1.jpg"} 
-      title={"first title"} 
-      description={"first description ever to see the new blog"} 
-      date={"21/04/20"}/>
-  </div>
-)
+
+  const BlogContainer = styled.div`
+    display: flex;
+  `
+
+  return (
+    <BlogContainer>
+      <PostContainer
+        image={"/img/pic1.jpg"}
+        title={"first title"}
+        date={"21/04/20"} />
+      <PostContainer
+        image={"/img/pic2.jpg"}
+        title={"second title"}
+        date={"21/04/20"} />
+      <PostContainer
+        image={"/img/pic3.jpg"}
+        title={"third title"}
+        date={"21/04/20"} />
+    </BlogContainer>
+  );
 }
