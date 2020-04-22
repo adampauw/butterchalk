@@ -29,14 +29,12 @@ export const DetailsContainer = (props: DetailsProps) => {
     font-size: 3vw;
     position: absolute;
     top: 60%;
-    height: 100%;
   `;
 
   const Date = styled.span`
     font-size: 1.5vw;
     position: absolute;
     top: 50%;
-    height: 100%;
   `;
 
   const Triangle = styled.div`
@@ -44,7 +42,7 @@ export const DetailsContainer = (props: DetailsProps) => {
     height: 0;
     border-left: 12vw solid transparent;
     border-right: 12vw solid transparent;
-    border-bottom: 18vw solid #ffffff8c;
+    border-bottom: 18vw solid #ffffff70;
     display: flex;
     justify-content: center;
     flex-direction: column;
