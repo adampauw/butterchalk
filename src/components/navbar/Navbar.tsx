@@ -1,8 +1,6 @@
 import React,{FC} from 'react'
 import { NavbarLink } from './NavbarLink';
 import styled from '@emotion/styled';
-import isMobile from "../helper/ScreenSize";
-
 
 
 export const Navbar: FC = (props: any) => {
@@ -19,17 +17,14 @@ export const Navbar: FC = (props: any) => {
       left: 85%;
     }
     @media (max-width: 425px) {
-      left: 70%;
-      width: 30%;
+      display: none;
     }
   ` 
   return(
-    isMobile() ?
-    <div>hihi</div> :
     <NavbarContainer>
       <NavbarLink text="Blog" to="#"/>
       <NavbarLink text="About" to="#"/>
       <NavbarLink text="Contact" to="#"/>
     </NavbarContainer>
-  );
+  )
 };
