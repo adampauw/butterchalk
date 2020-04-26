@@ -17,7 +17,7 @@ export const Overlay = (props: OverlayProps) => {
     background: white;
     position: absolute;
     @media (max-width: 425px) {
-      left: ${props.position - 90}px;
+      display: none;
     }
   `;
 

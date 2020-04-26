@@ -7,6 +7,7 @@ import Overlay from "./components/header/Overlay";
 import { Blog } from "./components/blog/Blog";
 import FancyButton from "./components/header/FancyButton";
 import "./App.scss";
+import { SvgIcon } from "./components/helper/SVGicon";
 
 const App: React.FC = () => {
   const Background = styled.div`
@@ -15,6 +16,10 @@ const App: React.FC = () => {
     background-position: center;
     height: 600px;
     position: relative;
+    @media (max-width: 425px) {
+      height: 400px;
+      background-position: right;
+    }
   `;
 
   return (
@@ -22,6 +27,7 @@ const App: React.FC = () => {
       <Background>
         <Navbar />
         <NavbarMobile />
+        <SvgIcon src='/img/butterchalk_logo.svg' cssClass="logo" color="black" />
         <Overlay width={100} height={600} position={0} />
         <Overlay width={20} height={600} position={120} />
       </Background>
