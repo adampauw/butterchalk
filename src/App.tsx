@@ -31,7 +31,7 @@ const App: React.FC = () => {
         <Overlay width={100} height={600} position={0} />
         <Overlay width={20} height={600} position={120} />
       </Background>
-      <div className="Content" style={{ height: "100vh" }}>
+      <div className="Content">
         <FancyButton/>
         <Blog/>
       </div>

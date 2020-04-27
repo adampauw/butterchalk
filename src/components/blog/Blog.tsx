@@ -5,7 +5,9 @@ import styled from '@emotion/styled';
 export const Blog = () => {
 
   const BlogContainer = styled.div`
-    display: flex;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   `
 
   return (
@@ -23,8 +25,6 @@ export const Blog = () => {
         image={"/img/pic3.jpg"}
         title={"third title"}
         date={"21/04/20"} />
-    </BlogContainer>
-    <BlogContainer>
       <PostContainer
         image={"/img/pic4.jpg"}
         title={"first title"}
