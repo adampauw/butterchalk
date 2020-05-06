@@ -16,9 +16,6 @@ export const Navbar: FC = (props: any) => {
     @media (max-width: 768px) {
       left: 85%;
     }
-    @media (max-width: 425px) {
-      display: none;
-    }
   ` 
   return(
     <NavbarContainer>

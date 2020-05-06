@@ -9,9 +9,6 @@ export const MobileNav: FC = () => {
   const NavigationContainer = styled.nav`
     width: 100%;
     position: absolute;
-    @media(min-width: 450px) {
-      display: none;
-    }
   `
 
   return (

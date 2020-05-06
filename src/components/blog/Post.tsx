@@ -11,17 +11,22 @@ interface PostProps {
 export const PostContainer = (props: PostProps) => {
 
   const Post = styled.div`
-    width: 33%;
+    width: 98%;
     height: 0;
-    padding-top: 33%;
+    padding-top: 97%;
+    margin: 1%;
     background-image: url(${props.image});
     background-size: cover;
-    margin: 10px;
     position: relative;
     transition: opacity .4s ease;
     &:hover {
       opacity: 0.5;
       cursor: pointer;
+    }
+    @media(max-width: 425px) {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 10px;
     }
   `;
 

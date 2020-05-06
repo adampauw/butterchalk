@@ -29,12 +29,24 @@ export const DetailsContainer = (props: DetailsProps) => {
     font-size: 3vw;
     position: absolute;
     top: 60%;
+    @media(max-width: 425px) {
+      font-size:10vw;
+    }
+    @media(min-width: 426px) and (max-width: 768px) {
+      font-size:4.5vw;
+    }
   `;
 
   const Date = styled.span`
     font-size: 1.5vw;
     position: absolute;
     top: 50%;
+    @media(max-width: 425px) {
+      font-size:5vw;
+    }
+    @media(min-width: 426px) and (max-width: 768px) {
+      font-size:3vw;
+    }
   `;
 
   const Triangle = styled.div`
@@ -47,6 +59,16 @@ export const DetailsContainer = (props: DetailsProps) => {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    @media(max-width: 425px) {
+      border-left: 36vw solid transparent;
+      border-right: 36vw solid transparent;
+      border-bottom: 55vw solid #ffffff70;
+    }
+    @media(min-width: 426px) and (max-width: 768px) {
+      border-left: 16vw solid transparent;
+      border-right: 16vw solid transparent;
+      border-bottom: 25vw solid #ffffff70;
+    }
   `;
 
   return (
