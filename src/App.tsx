@@ -7,8 +7,10 @@ import Overlay from "./components/header/Overlay";
 import { Blog } from "./components/blog/Blog";
 import FancyButton from "./components/header/FancyButton";
 import "./App.scss";
-import { SvgIcon } from "./components/helper/SVGicon";
 import { isMobile } from "./components/helper/deviceDetect";
+import { Info } from "./components/info/Info";
+import { SvgIcon } from "./components/helper/SVGicon";
+
 
 const App: React.FC = () => {
   const Background = styled.div`
@@ -27,14 +29,21 @@ const App: React.FC = () => {
     <div className="App">
       <Background>
         {isMobile() ?
-          <NavbarMobile /> :
-          <Navbar />
+          <>
+            <NavbarMobile />
+            <SvgIcon src='/img/mobilechalk.svg' cssClass="logo-text" color="black" />
+          </>
+          :
+          <>
+            <Navbar />
+            <SvgIcon src='/img/deskchalk.svg' cssClass="logo-text" color="black" />
+          </>
         }
-        <SvgIcon src='/img/butterchalk_logo.svg' cssClass="logo" color="black" />
         <Overlay width={100} height={600} position={0} />
         <Overlay width={20} height={600} position={120} />
       </Background>
       <div className="Content">
+        <Info />
         <FancyButton />
         <Blog />
       </div>

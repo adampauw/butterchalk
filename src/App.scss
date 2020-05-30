@@ -4,34 +4,39 @@
   .Content {
     padding: 5px;
   }
-  .logo svg {
+  .logo-text svg {
     position: absolute;
     top: 15%;
-    left: 25%;
+    left: 10%;
     height: 60%;
     opacity: 0.9;
+  }
+  .logo-churn svg {
+    height: 50%;
+    margin-left: 20px;
   }
 }
 
 // Mobile
 
 .App {
-  .logo svg {
+  .logo-text svg {
     @media(min-width: 375px) {
-      left: 29%;
+      left: 18%;
     }
     @media(min-width: 768px) {
-      top: 55%;
-      left: 65%;
-      height: 50%;
+      top: 60%;
+      left: 50%;
+      height: 25%;
       margin-top: -25%;
     }
     @media(min-width: 1024px) {
-      top: 65%;
+      top: 75%;
+      height: 30%;
     }
     @media(min-width: 1440px) {
-      top: 80%;
-      height: 60%;
+      top: 85%;
+      height: 40%;
     }
     @media(min-width: 2560px) {
       top: 115%;
