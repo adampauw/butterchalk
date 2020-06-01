@@ -2,7 +2,6 @@
   text-align: center;
   overflow: hidden;
   .Content {
-    padding: 5px;
   }
   .logo-text svg {
     position: absolute;
@@ -11,9 +10,29 @@
     height: 60%;
     opacity: 0.9;
   }
-  .logo-churn svg {
-    height: 50%;
-    margin-left: 20px;
+  .logo-churn {
+    width: 30%;
+    display: flex;
+    svg {
+      position: absolute;
+      top: -15%;
+      right: 5%;
+      height: 50%;
+      @media (max-width: 1024px) {
+        top: -10%;
+        right: 2%;
+      }
+      @media (max-width: 768px) {
+        top: 0;
+        right: 2%;
+        height: 40%;
+      }
+    }
+  }
+  .dolomites svg {
+    height: 100%;
+    width: 100%;
+    margin-left: 0;
   }
 }
 
