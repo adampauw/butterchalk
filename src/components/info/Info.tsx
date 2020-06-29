@@ -56,7 +56,7 @@ export const Info: FC = (props: any) => {
         <TextWrapper>
           <Text>Butterchalk offers a lighter take on the climbing scene, a place for the average climber to find slightly above average advice
           </Text>
-          <Text>I’m not a pro, nor an old mountain man that could tie a prusik knot with a spare tendon he dug out of his leg. Im passionate climber whos had his pitfalls and revelations and wants to share them with you. Maybe it streamlines your success or just fills your day with comedic gold. Either way, lets get mossy
+          <Text>I’m not a pro, nor an old mountain man that could tie a prusik with a spare tendon he dug out of his leg. Im a passionate climber whos had his pitfalls and revelations and wants to share them with you. Maybe it streamlines your success or just fills your day with comedic gold. Either way, lets get mossy
           </Text>
         </TextWrapper>
         {!isMobile() && <SvgIcon src='/img/butterchalk_logo.svg' cssClass="logo-churn" color="black" />}

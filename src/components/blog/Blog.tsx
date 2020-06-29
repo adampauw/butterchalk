@@ -1,6 +1,7 @@
 import React from 'react'
-import PostContainer from './Post';
 import styled from '@emotion/styled';
+
+import PostContainer from './Post';
 
 export const Blog = () => {
 

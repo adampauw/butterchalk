@@ -1,0 +1,27 @@
+@import './variables';
+
+@mixin box-shadow {
+  box-shadow: $box-shadow-values $box-shadow-color;
+}
+
+@mixin box-shadow-error {
+  box-shadow: $box-shadow-small-values $error-color;
+}
+
+@mixin text-shadow {
+  text-shadow: 1px 0px 0px;
+}
+
+@mixin breakpoint($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+  @else if unitless($breakpoint) {
+    $breakpoint: $breakpoint + 0px;
+    @media (min-width: $breakpoint) {
+      @content;
+    }
+  }
+}
