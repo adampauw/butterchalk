@@ -11,10 +11,11 @@ import Overlay from "./Overlay";
 
 export const Background = () => {
   const Background = styled.div`
-    background-image: url("https://res.cloudinary.com/butterchalk/image/upload/v1593255744/mountain-fog_Background.png");
+    background-image: url("https://res.cloudinary.com/butterchalk/image/upload/v1593255744/mountain-fog_simple.png");
     background-size: cover;
     background-position: center;
     height: 600px;
+  	width: 100vw;
     position: relative;
     @media (max-width: 425px) {
       height: 400px;
@@ -27,57 +28,40 @@ export const Background = () => {
 		height: 100%;
 		position: relative;
 		overflow: hidden;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 2px;
   `;
 
-  const BackgroundImage = styled.div`
-  	position: absolute;
-		top: 0;
-		left: 0;
-		width: 100vw;
-		height: 100%;
-  `;
-
-
-  const Midground = css`
-  background: url("https://res.cloudinary.com/butterchalk/image/upload/v1593255744/mountain-fog_Midground.png");
-  background-size: cover;
-  background-position: center;
-  transform: scale3d(1.1, 1.1, 1.1);
-  opacity: 0.2;
-  animation: scaler 1s ease-out;
-  animation-fill-mode: forwards;
-  `
-
-  const Foreground = css`
-    ${Midground};
-		background: url("https://res.cloudinary.com/butterchalk/image/upload/v1593255744/mountain-fog_Foreground.png");
-		transform: scale3d(1.3, 1.3, 1.3);
-		opacity: 0.1;
-		animation: scaler 1.2s ease-out;
-		animation-fill-mode: forwards;
+  const objects = css `
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 0 5px #000;
   `
 
   return (
 
-    <Background>
-      <BackgroundWrapper>
-        <BackgroundImage css={css` ${Midground} `} />
-        <BackgroundImage css={css ` ${Foreground} `} />
-      </BackgroundWrapper>
+    <BackgroundWrapper>
+      <Background />
       {isMobile() ?
         <React.Fragment>
           <NavbarMobile />
-          <SvgIcon src='/img/mobilechalk.svg' cssClass="logo-text" color="black" />
+          <SvgIcon src='/img/mobilechalk.svg' cssClass="logo-text" color="black"/>
         </React.Fragment>
         :
         <React.Fragment>
           <Navbar />
-          <SvgIcon src='/img/deskchalk.svg' cssClass="logo-text" color="black" />
+          <SvgIcon src='/img/deskchalk.svg' cssClass="logo-text" color="black" css={css`${objects}`}/>
         </React.Fragment>
       }
       <Overlay width={100} height={600} position={0} />
       <Overlay width={20} height={600} position={120} />
-    </Background>
+    </BackgroundWrapper>
   )
 };
 
