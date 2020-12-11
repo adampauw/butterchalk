@@ -28,7 +28,6 @@ export const Background = () => {
 		height: 100%;
 		position: relative;
 		overflow: hidden;
-    height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
     perspective: 2px;
@@ -47,7 +46,7 @@ export const Background = () => {
   return (
 
     <BackgroundWrapper>
-      <Background />
+      <Background>
       {isMobile() ?
         <React.Fragment>
           <NavbarMobile />
@@ -61,6 +60,7 @@ export const Background = () => {
       }
       <Overlay width={100} height={600} position={0} />
       <Overlay width={20} height={600} position={120} />
+      </Background>
     </BackgroundWrapper>
   )
 };
